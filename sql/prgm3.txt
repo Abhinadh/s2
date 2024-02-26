@@ -1,0 +1,100 @@
+SQL>create table department(dp_id int primary key,dpt_name varchar(10),city varchar(10));
+
+
+SQL>create table employe(em_id int primary key,emp_name varchar(10),dp_id int, salary number(7,2),foregin key (dp_id) references department(de_id);
+
+
+
+
+select*from department;
+
+     DP_ID DPT_NAME   CITY
+---------- ---------- ----------
+	 1 devloper   ekm
+	 2 tester     ekm
+	 3 depl       tvm
+	 4 manager    knr
+	 5 hr	      kollam
+
+SQL> select* from employe 
+  2  ;
+
+     EM_ID EMP_NAME	   DP_ID     SALARY
+---------- ---------- ---------- ----------
+	 1 anil 	       1      20000
+	 2 sunil	       2      30500
+	 3 akhil	       4      18000
+	 4 abin 	       5      35000
+	 5 abhi 	       3      45000
+
+SQL> select emp_name,dpt_name from employe,depatment where employe.em_id=department.dp_id;
+select emp_name,dpt_name from employe,depatment where employe.em_id=department.dp_id
+                                      *
+
+
+
+SQL> select emp_name,dpt_name from employe,department where employe.em_id=department.dp_id;
+
+EMP_NAME   DPT_NAME
+---------- ----------
+anil	   devloper
+sunil	   tester
+akhil	   depl
+abin	   manager
+abhi	   hr
+
+
+
+
+SQL> select emp_name,city from employe,department where employe.em_id=department.dp_id and department.city='ekm';
+
+EMP_NAME   CITY
+---------- ----------
+anil	   ekm
+sunil	   ekm
+
+
+
+SQL> delete from employe where emp_name='sunil';
+
+1 row deleted.
+
+SQL> select * from employe;
+
+     EM_ID EMP_NAME	   DP_ID     SALARY
+---------- ---------- ---------- ----------
+	 1 anil 	       1      20000
+	 3 akhil	       4      18000
+	 4 abin 	       5      35000
+	 5 abhi 	       3      45000
+
+SQL> update employe set salary=salary+500 where dp_id=1;
+
+1 row updated.
+
+SQL> select * from employe;
+
+     EM_ID EMP_NAME	   DP_ID     SALARY
+---------- ---------- ---------- ----------
+	 1 anil 	       1      20500
+	 3 akhil	       4      18000
+	 4 abin 	       5      35000
+	 5 abhi 	       3      45000
+
+SQL> select emp_name,dpt_name from employe,department where employe.salary>35000;
+
+EMP_NAME   DPT_NAME
+---------- ----------
+abhi	   devloper
+abhi	   tester
+abhi	   depl
+abhi	   manager
+abhi	   hr
+
+SQL> 
+SQL> select emp_name,dpt_name from employe,department where employe.em_id=department.dp_id and employe.salary>35000;
+
+EMP_NAME   DPT_NAME
+---------- ----------
+abhi	   hr
+
