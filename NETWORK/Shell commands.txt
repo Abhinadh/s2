@@ -1,0 +1,108 @@
+abin@JoseAbin:/mnt/d$ ls -l
+
+drwxrwxrwx 1 abin abin 512 May  7  2022 '$RECYCLE.BIN'
+drwxrwxrwx 1 abin abin 512 Jun  7 15:12 'Exe files'
+drwxrwxrwx 1 abin abin 512 May  7  2022 'Microsoft Office Pro Plus 2021 x64'
+drwxrwxrwx 1 abin abin 512 Jun 12 09:18 "RESUME'"
+d--x--x--x 1 abin abin 512 Jun  6 15:59 'System Volume Information'
+drwxrwxrwx 1 abin abin 512 Jun  7 15:10  mace-mcalab-22-main
+
+
+
+abin@JoseAbin:/mnt/d$ echo /*
+/bin /boot /dev /etc /home /init /lib /lib32 /lib64 /libx32 /lost+found /media /mnt /opt /proc /root /run /sbin /snap /srv /sys /tmp /usr /var
+
+
+abin@JoseAbin:/mnt/d$ read b
+6
+abin@JoseAbin:/mnt/d$ echo $b
+6
+abin@JoseAbin:/mnt/d$ echo $((4+9))
+13
+abin@JoseAbin:/mnt/d$ echo $((4*9))
+36
+abin@JoseAbin:/mnt/d$ echo $a+$b
+4+6
+abin@JoseAbin:/mnt/d$ echo $((a+b))
+10
+
+
+
+
+abin@JoseAbin:/mnt/d$ cat >f1.txt
+1
+3
+5
+7
+9
+^C
+abin@JoseAbin:/mnt/d$ cat f1.txt
+1
+3
+5
+7
+9
+abin@JoseAbin:/mnt/d$ cat >f2.txt
+2
+4
+6
+8
+10
+^C
+abin@JoseAbin:/mnt/d$ cat f2.txt
+2
+4
+6
+8
+10
+abin@JoseAbin:/mnt/d$ cat f1.txt f2.txt >f3.txt
+abin@JoseAbin:/mnt/d$ cat f3.txt
+1
+3
+5
+7
+9
+2
+4
+6
+8
+10
+abin@JoseAbin:/mnt/d$ cat f1.txt > f3.txt
+abin@JoseAbin:/mnt/d$ cat f1.txt >> f3.txt
+abin@JoseAbin:/mnt/d$ cat -n f3.txt
+     1  1
+     2  3
+     3  5
+     4  7
+     5  9
+     6  1
+     7  3
+     8  5
+     9  7
+    10  9
+
+
+abin@JoseAbin:/mnt/d$ cat >> f3.txt
+2
+4
+^C
+abin@JoseAbin:/mnt/d$ cat f3.txt
+1
+3
+5
+7
+9
+1
+3
+5
+7
+9
+2
+4
+
+abin@JoseAbin:/mnt/d$ cat *.txt
+1
+3
+5
+7
+9

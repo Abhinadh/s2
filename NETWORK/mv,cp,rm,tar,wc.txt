@@ -1,0 +1,68 @@
+#to rename file
+abin@JoseAbin:/mnt/d/Lab/shellcommands/f1$ mv t3.txt t1.txt
+
+#to move files to destn
+abin@JoseAbin:/mnt/d/Lab/shellcommands$ mv t3.txt t2.txt /mnt/d/Lab/shellcommands/newf1
+
+#to rename directory
+abin@JoseAbin:/mnt/d/Lab/shellcommands$ mv newf1 f1
+
+#copy contents of one file to another
+abin@JoseAbin:/mnt/d/Lab/shellcommands$ cp t1.txt t2.txt
+
+#copy file to a folder
+abin@JoseAbin:/mnt/d/Lab/shellcommands$ cp t1.txt f1
+
+#copy one directory to another
+abin@JoseAbin:/mnt/d/Lab/shellcommands$ cp -r f2 f1
+
+#remove text files
+abin@JoseAbin:/mnt/d/Lab/shellcommands$ rm t1.txt t2.txt
+
+#remove directory
+abin@JoseAbin:/mnt/d/Lab/shellcommands$ rm -r f2
+
+#to compress files
+abin@JoseAbin:/mnt/d/Lab/shellcommands/f2$ tar -cvf file.tar *.txt
+t2.txt
+t3.txt
+
+#to decompress files
+abin@JoseAbin:/mnt/d/Lab/shellcommands/f2$ tar -xvf file.tar
+t2.txt
+t3.txt
+
+#gzip
+abin@JoseAbin:/mnt/d/Lab/shellcommands/f2$ tar cvzf file.tar.gz *.txt
+t2.txt
+t3.txt
+
+#decompress gzip
+abin@JoseAbin:/mnt/d/Lab/shellcommands/f2$ tar xvzf file.tar.gz
+t2.txt
+t3.txt
+
+
+
+#wc command to find no of lines,word,characters
+#file create using cat
+abin@JoseAbin:/mnt/d/Lab/shellcommands$ wc t1.txt
+ 2  6 32 t1.txt
+abin@JoseAbin:/mnt/d/Lab/shellcommands$ wc t2.txt
+ 2  4 15 t2.txt
+abin@JoseAbin:/mnt/d/Lab/shellcommands$ wc -l t2.txt
+2 t2.txt
+abin@JoseAbin:/mnt/d/Lab/shellcommands$ wc -w t2.txt
+4 t2.txt
+abin@JoseAbin:/mnt/d/Lab/shellcommands$ wc -c t2.txt
+15 t2.txt
+
+#longest line in a file
+abin@JoseAbin:/mnt/d/Lab/shellcommands$ wc -L t2.txt
+9 t2.txt
+
+#no of files in a directory
+abin@JoseAbin:/mnt/d/Lab/shellcommands$ ls
+'Shell commands.txt'   f1   f2   mkdir,cd,pwd,find.txt   mv.txt   t2.txt
+abin@JoseAbin:/mnt/d/Lab/shellcommands$ ls | wc -l
+6

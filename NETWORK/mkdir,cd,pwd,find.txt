@@ -1,0 +1,16 @@
+abin@JoseAbin:/mnt/d$ mkdir f1
+abin@JoseAbin:/mnt/d$ cd f1
+abin@JoseAbin:/mnt/d/f1$ mkdir f2
+abin@JoseAbin:/mnt/d/f1$ cd f2
+abin@JoseAbin:/mnt/d/f1/f2$ cd ..
+abin@JoseAbin:/mnt/d/f1$ cd ~
+abin@JoseAbin:~$
+
+abin@JoseAbin:/mnt/d/f1$ pwd
+/mnt/d/f1
+abin@JoseAbin:/mnt/d/f1$ mkdir -p p1/p2/p3
+
+
+abin@JoseAbin:/mnt/d$ find -type f -name "*.txt"
+
+abin@JoseAbin:/mnt/d$ sudo find  /mnt/d  -type f -name 'f1' -exec rm -i {} \; ->not working
